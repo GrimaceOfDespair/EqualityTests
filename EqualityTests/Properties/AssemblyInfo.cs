@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("EqualityTests")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Equality Assertions")]
+[assembly: AssemblyDescription("A way for performing suite of tests for equality in declarative manner")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Arkadiusz K")]
 [assembly: AssemblyProduct("EqualityTests")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]

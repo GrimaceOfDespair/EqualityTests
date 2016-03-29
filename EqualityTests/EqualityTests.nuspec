@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <version>1.0.0.0</version>
+    <authors>$author$</authors>
+    <title>$title$</title>
+    <projectUrl>https://github.com/baks/EqualityTests</projectUrl>
+    <iconUrl>https://avatars3.githubusercontent.com/u/671469?&amp;s=64</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <summary />
+    <releaseNotes />
+    <copyright>$copyright$</copyright>
+    <tags>test testing assert</tags>
+  </metadata>
+</package>

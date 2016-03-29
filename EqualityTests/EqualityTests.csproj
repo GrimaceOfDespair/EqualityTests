@@ -45,13 +45,6 @@
       <HintPath>..\packages\AutoFixture.Idioms.3.36.8\lib\net40\Ploeh.AutoFixture.Idioms.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assertions\GetHashCodeValueCheckAssertion.cs" />
@@ -91,6 +84,7 @@
     <Compile Include="SpecimensUsedInConstructorCollector.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="EqualityTests.nuspec" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>

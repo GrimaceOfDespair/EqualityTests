@@ -45,6 +45,7 @@
       <HintPath>..\packages\AutoFixture.Idioms.3.36.8\lib\net40\Ploeh.AutoFixture.Idioms.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assertions\GetHashCodeValueCheckAssertion.cs" />

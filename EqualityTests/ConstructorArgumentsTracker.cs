@@ -68,7 +68,7 @@ namespace EqualityTests
             for (var idx = 0; idx < arguments.Length; idx++)
             {
                 yield return constructorInfo.Invoke(arguments.Select(
-                    (o, i) => i == idx ? specimenBuilder.CreateInstanceOfType(o.GetType()) : o).ToArray());
+                    (o, i) => i == idx ? specimenBuilder.CreateInstanceOfType(o.GetType()).DifferentFrom(o) : o).ToArray());
             }
         }
     }

@@ -67,7 +67,8 @@ namespace EqualityTests.UnitTests
         public void ShouldCreateAsManyDistinctInstancesAsCtorParameters(
             [Substitute]ISpecimenBuilder specimenBuilder)
         {
-            specimenBuilder.Create(Arg.Any<object>(), Arg.Any<ISpecimenContext>()).Returns(1);
+            specimenBuilder.Create(Arg.Is(typeof(string)), Arg.Any<ISpecimenContext>()).Returns("foo");
+            specimenBuilder.Create(Arg.Is(typeof(int)), Arg.Any<ISpecimenContext>()).Returns(1);
 
             var sut = new ConstructorArgumentsTracker(specimenBuilder, typeof(SimpleType).GetConstructors().Single());
 
@@ -76,8 +77,9 @@ namespace EqualityTests.UnitTests
 
             var instances = sut.CreateDistinctInstancesByChaningOneByOneCtorArgIn(instance).ToList();
 
+            Assert.Equal(3, instances.Count);
+            specimenBuilder.Received(2).Create(Arg.Is(typeof(string)), Arg.Any<ISpecimenContext>());
             specimenBuilder.Received(1).Create(Arg.Is(typeof(int)), Arg.Any<ISpecimenContext>());
-            Assert.Equal(1, instances.Count);
         }
     }
 }

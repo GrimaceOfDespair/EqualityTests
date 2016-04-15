@@ -1,4 +1,5 @@
-﻿using EqualityTests.Extensions;
+﻿using EqualityTests;
+using EqualityTests.Extensions;
 using NSubstitute;
 using Ploeh.AutoFixture.AutoNSubstitute;
 using Ploeh.AutoFixture.Idioms;
@@ -51,7 +52,7 @@ namespace EqualityTests.UnitTests
 
             sut.Create(typeof (SimpleType), specimenContext);
 
-            specimenContext.Received(1).Resolve(Arg.Any<object>());
+            specimenContext.Received(3).Resolve(Arg.Any<object>());
         }
 
         [Theory, AutoDomainData]
@@ -65,7 +66,7 @@ namespace EqualityTests.UnitTests
             sut.Create(typeof (SimpleType), context);
             sut.Create(typeof (SimpleType), context);
 
-            context.Received(1).Resolve(Arg.Any<object>());
+            context.Received(3).Resolve(Arg.Any<object>());
         }
     }
 }
